@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josephine Portfolio</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+            width: 100%;
+            background-color: teal;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo{
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .nav-links{
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover{
+            color: black;
+        }
+
+        /* HERO SECTION */
+
+        .hero{
+            width: 90%;
+            margin: 40px auto;
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .hero-text{
+            width: 55%;
+        }
+
+        .hero-text h1{
+            font-size: 45px;
+            color: teal;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p{
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        .buttons{
+            margin-top: 25px;
+        }
+
+        .btn{
+            padding: 12px 25px;
+            border: none;
+            background-color: teal;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .btn:hover{
+            background-color: teal;
+        }
+
+        .hero-image{
+            width: 40%;
+            text-align: center;
+        }
+
+        .hero-image img{ 
+               width: 320px;
+               height: 320px; border-radius: 50%;
+               object-fit: cover; object-position: top;
+               border: 6px solid teal; 
+        }
+
+        /* SECTIONS */
+
+        section{
+            width: 90%;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2{
+            color: teal;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        section p{
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        /* SKILLS */
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th{
+            background-color: teal;
+            color: white;
+            padding: 15px;
+        }
+
+        table td{
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        table tr:hover{
+            background-color: #f2f2f2;
+        }
+
+        /* HOBBIES */
+
+        .hobbies-list{
+            margin-top: 20px;
+        }
+
+        .hobbies-list li{
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* CONTACT */
+
+        .contact p{
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+
+        .footer{
+            width: 100%;
+            background-color: teal;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 900px){
+
+            .hero{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text{
+                width: 100%;
+            }
+
+            .hero-image{
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            .nav-container{
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links{
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="nav-container">
+
+            <div class="logo">
+                Josephine
+            </div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="#business">Business Model</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- HERO SECTION -->
+
+    <div class="hero" id="home">
+
+        <div class="hero-text">
+
+            <h1>Hello, I am Josephine</h1>
+
+            <p>
+                I am a Junior Software Engineer passionate about building
+                beautiful and functional websites using HTML, CSS,
+                Python, and Django.
+            </p>
+
+            <div class="buttons"> <a href="#contact"> <button class="btn">Hire Me</button> </a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="jojo.jpeg" alt="Josephine">
+        </div>
+
+    </div>
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2>MY SKILLS</h2>
+
+        <table>
+
+            <tr>
+                <th>SKILL</th>
+                <th>LEVEL</th>
+                <th>EXPERIENCE</th>
+            </tr>
+
+            <tr>
+                <td>HTML</td>
+                <td>excellent</td>
+                <td>2 Years</td>
+            </tr>
+
+            <tr>
+                <td>CSS</td>
+                <td>excellent</td>
+                <td>2 Years</td>
+            </tr>
+
+            <tr>
+                <td>PYTHON</td>
+                <td>Intermediate</td>
+                <td>2 Years</td>
+            </tr>
+
+            <tr>
+                <td>DJANGO</td>
+                <td>Intermediate</td>
+                <td>2 Years</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- HOBBIES -->
+
+    <section id="hobbies">
+
+        <b><h2>MY HOBBIES</h2></b>
+
+        <ul class="hobbies-list">
+            <li>Reading books</li>
+            <li>Cooking</li>
+            <li>Traveling</li>
+            <li>Listening to music</li>
+            <li>Solving real-world tech problems</li>
+        </ul>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <h2>CONTACT ME</h2>
+
+        <p>Email: josephinekentrhines@gmail.com</p>
+
+        <p>Phone: +256 775415726</p>
+
+        <p>Location: Kampala, Uganda</p>
+
+    </section>
+
+    <!-- BUSINESS MODEL SECTION -->
+
+<section id="business">
+
+    <h2>Business Model</h2>
+
+    <p>
+        My business focuses on creating clean and responsive websites
+        for individuals, small businesses, and organizations.<br>
+        I provide web design and development services using
+        HTML, CSS, Python, and Django.
+    </p>
+
+    <br>
+
+    <p>
+        I aim to help businesses build their online presence through
+        simple, modern, and user-friendly websites.
+    </p>
+
+    <br>
+
+    <h3>SERVICES I OFFER</h3>
+
+    <ul class="hobbies-list">
+        <li>Website Design</li>
+        <li>Frontend Development</li>
+        <li>Django Web Applications</li>
+        <li>Portfolio Websites</li>
+        <li>Business Websites</li>
+    </ul>
+
+</section>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+        <p>© 2026 Josephine Portfolio Website</p>
+    </div>
+
+
+</body>
+</html>
+
